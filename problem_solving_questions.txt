@@ -1,0 +1,102 @@
+Building problem solving skills
+
+A. Basic conditions
+1. Check if a number is even or odd
+2. Check if a number is positive, negative, or zero
+3. Find the largest of two numbers
+4. Find the largest of three numbers
+5. Check if a year is a leap year
+6. Check if a person is eligible based on a condition
+7. FizzBuzz
+8. Check whether a character is a vowel or consonant
+
+B. Basic loops & counting
+9. Print numbers from 1 to N
+10.Print numbers from N to 1
+11.Find the sum of numbers from 1 to N
+12.Find the sum of even numbers from 1 to N
+13.Find the factorial of a number
+14.Generate a multiplication table
+15.Count the digits in a number
+16.Sum the digits of a number
+17.Reverse a number
+18.Count occurrences of a particular digit
+
+C. Number problems
+19.Check whether a number is prime
+20.Print all prime numbers up to N
+21.Find GCD of two numbers
+22.Find LCM of two numbers
+23.Generate the Fibonacci sequence
+24.Check whether a number is a palindrome
+25.Check whether a number is an Armstrong number
+26.Check whether a number is a perfect number
+27.Find the largest digit in a number
+28.Find the smallest digit in a number
+
+D. Pattern problems
+29.Print a right triangle of stars
+30.Print an inverted triangle
+31.Print a number triangle
+32.Print a pyramid
+33.Print an inverted pyramid
+34.Print a diamond pattern
+35.Print Floyd's triangle
+
+
+
+---
+
+
+
+Would you like to keep going with **Exercise 9: Remove Duplicates**, or would you like to review/code any of these?
+36.Print Pascal's triangle
+
+E. Array/List problems
+37.Find the largest element
+38.Find the smallest element
+39.Find the second-largest element
+40.Calculate the sum and average
+41.Count even and odd elements
+42.Reverse an array
+43.Remove duplicates
+44.Find duplicate elements
+45.Search for an element
+46.Find the frequency of each element
+
+F. Classic searching & sorting
+47.Linear search
+48.Binary search
+49.Bubble sort
+50.Selection sort
+51.Insertion sort
+52.Merge two sorted arrays
+53.Find the missing number
+54.Find the pair that adds up to a target
+
+G. String problems
+55.Reverse a string
+56.Check whether a string is a palindrome
+57.Count vowels and consonants
+58.Count the frequency of characters
+59.Remove duplicate characters
+60.Find the first non-repeating character
+61.Check whether two strings are anagrams
+62.Reverse words in a sentence
+63.Find the longest word in a sentence
+
+H. Slightly more challenging classics
+64.Two Sum
+65.Three Sum
+66.Maximum subarray sum
+67.Move all zeros to the end
+68.Find the intersection of two arrays
+69.Find the union of two arrays
+70.Rotate an array
+71.Find the majority element
+72.Check balanced parentheses
+73.Implement a stack
+74.Implement a queue
+75.Fibonacci using recursion
+76.Factorial using recursion
+77.Tower of Hanoi

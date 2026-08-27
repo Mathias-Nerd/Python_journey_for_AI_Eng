@@ -1,0 +1,17 @@
+FizzBuzz
+Palindrome
+Factorial
+Fibonacci
+Prime numbers
+Reverse a string
+Count characters
+Find maximum/minimum
+Remove duplicates
+Frequency counting
+Two Sum
+Anagram checking
+Binary search
+Linear search
+Sorting
+Recursion problems
+Matrix problems

@@ -1,0 +1,14 @@
+Questions for exercises
+
+ex1 - A function that takes a string and a target character, counts how many times the character appears (case-insensitive), and       determines if that count is even or odd.
+
+ex2 - Take a string representing an account number or ID. Obscure all but the last 4 characters with asterisks (*). If the string is shorter than 4 characters, return "Invalid Input
+
+ex3 - a function analyse_user_tags(user1_raw, user2_raw) that cleans messy tag entries from two different users, removes duplicate tags, and identifies shared and unique interests between them.
+
+ex4 - You have a list of temperatures in Celsius: celsius_temps = [0, 12, 25, 38.5, 100].Goal: Use map() with a lambda function to convert all temperatures to Fahrenheit.Formula: $(C \times \frac{9}{5}) + 32$Expected Output: [32.0, 53.6, 77.0, 101.3, 212.0]
+
+ex5 - A function analyse_students(threshold, **student_scores) that calculates the average score for each student, filters out anyone who falls below the threshold, and returns a formatted summary of qualifying students
+
+ex6 - a factory function create_pipeline(operation_type) that returns a stateful inner function that processes numbers.
+Requirements

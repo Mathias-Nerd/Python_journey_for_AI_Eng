@@ -1,0 +1,20 @@
+Conditionsals
+ternary
+cases
+loops
+strings (formatting, split,  join, maxsplit, fstring)
+functions
+args and kwargs
+function scope and lifetime (global,nonlocal, lifetime, LEGB rule)
+list
+lambda functions
+maps
+maps and lambda
+filter()
+sorted() and sort()
+list comprehension
+recursion
+data structures
+list (definition, slicing, methods,)
+tuples
+dictionaries

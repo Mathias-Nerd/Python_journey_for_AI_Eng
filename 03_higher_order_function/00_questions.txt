@@ -1,0 +1,7 @@
+Questions in higher order functions
+exercise1    - using map and lambda function to square each number in a list
+exercise1b   - creating a list containing squares using list comprehension
+exercise2    - Filtering Even Numbers
+exercise3    - sorting strings by length
+exercise4    - Filter and captalise
+exercise5    - a program or function that:, Uses filter() with a lambda to keep only items where "category" is "tech". Uses map() with a lambda and a ternary operator (A if condition else B) to apply
