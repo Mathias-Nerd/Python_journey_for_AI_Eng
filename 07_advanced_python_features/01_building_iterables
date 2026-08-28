@@ -99,8 +99,9 @@ class MyRange:
         self.current += 1
         return value
 
-for i in MyRange(-1):
-    print(i)
+#Test vales
+# for i in MyRange(5):
+#     print(i)
 
 
 """
@@ -125,6 +126,7 @@ class EvenNumbers:
         return value
             
 
+#Test vales
 # for i in EvenNumbers(7):
 #     print(i) 
 
@@ -151,23 +153,168 @@ class FirstLetters:
         self.index += 1
         return value[0]
 
-for i in FirstLetters(['Mathias', 'Oluwaseun', 'Nerd']):
-        print(i)
-
-
-
-
-
-
-
-
+#Test vales
+# for i in FirstLetters(['Mathias', 'Oluwaseun', 'Nerd']):
+#         print(i)
 
 
 
 
 # B. If building a reusable ITERABLE (like list, proper way):
+# Here ther is Separation of Concerns:
 
-# In **init**, store ONLY data. No pointer.
-# In **iter**, create and return a BRAND NEW iterator object (fresh pointer = 0).
-# That new iterator follows all steps from A above.
-# Result: Can loop many times, because each for loop gets a fresh iterator.
+# First class (Iterable):
+# Responsible for storing the data / collection only
+# Does not store any iteration state like index or current
+# Its only job in **iter** is to create and return a brand new Iterator instance initialized with that data
+
+# Second class (Iterator):
+# Responsible for storing the iteration state (pointer/index)
+# Its job in **iter** is to return itself
+# Its job in **next** is to return the current element, advance the pointer, and raise StopIteration when exhausted
+
+"""
+EXAMPLE 1: MyRange
+Python
+# Iterable - data only
+class MyRange:
+    def __init__(self, stop):
+        self.stop = stop
+    def __iter__(self):
+        return MyRangeIterator(self.stop)
+
+# Iterator - data + pointer
+class MyRangeIterator:
+    def __init__(self, stop):
+        self.stop = stop
+        self.current = 0
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.current >= self.stop:
+            raise StopIteration
+        v = self.current
+        self.current += 1
+        return v
+
+
+EXAMPLE 2: Countdown
+Python
+class Countdown:
+    def __init__(self, start):
+        self.start = start
+    def __iter__(self):
+        return CountdownIterator(self.start)
+
+class CountdownIterator:
+    def __init__(self, start):
+        self.start = start
+        self.current = start
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.current <= 0:
+            raise StopIteration
+        v = self.current
+        self.current -= 1
+        return v
+
+c = Countdown(3)
+print(list(c)) # [3,2,1]
+print(list(c)) # [3,2,1]
+
+"""
+
+# YOUR 3 EXERCISES (Reusable)
+# 1. EvenNumbers(limit): yields 0,2,4... up to limit with limit inclusive
+
+class EvenNumbers: #The iterable itself
+    def __init__(self, limit):
+        self.limit = limit
+    def __iter__(self):
+        return EvenNumberIterator(self.limit)
+    
+class EvenNumberIterator: #The iterator
+    def __init__(self, limit):
+        self.limit = limit
+        self.current = 0
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.current > self.limit:
+            raise StopIteration
+        v = self.current
+        self.current += 2
+        return v
+    
+#Test vales
+# for i in EvenNumbers(6):
+#     print(i)
+# for i in EvenNumbers(7):
+#     print(i)
+
+# e = EvenNumbers(6)
+# print(list(e)) # [0,2,4,6]
+# print(list(e)) # [0,2,4,6] -> if this works again, you nailed it
+
+
+
+
+# 2. FirstLetters(words): yields first letter of each word ['Mathias','Nerd', 'Oluwaseun'] -> M,N
+class FirstLetters: #The iterable itself
+    def __init__(self, words):
+        self.words = words
+    def __iter__(self):
+        return FirstLettersIterator(self.words)
+
+class FirstLettersIterator:
+    def __init__(self, words):
+        self.words = words
+        self.index = 0
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.index >= len(self.words):
+            raise StopIteration
+        v = self.words[self.index]
+        self.index += 1
+        return v[0]
+
+#Test vales
+# list1 = ["Mathias", "Sodiq", "Blessing", "Evidence", "Carolyn", "Aniekan" ,"David"]
+# list2 = ["Florida", "Georgia", "Utah", "California","Massachussetts"]
+# for i in FirstLetters(list1):
+#     print(i)
+
+# for i in FirstLetters(list2):
+#     print(i)
+
+
+
+
+
+# 3. Squares(n): yields i*i for i from 1 to n Squares(3) -> 1,4,9
+class Squares:
+    def __init__(self, n):
+        self.n = n
+    def __iter__(self):
+        return SquaresIterator(self.n)
+
+class SquaresIterator:
+    def __init__(self, n):
+        self.n = n
+        self.index = 0
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.index >= len(self.n):
+            raise StopIteration
+        v = self.n[self.index] ** 2
+        self.index += 1
+        return v
+
+for i in Squares([1,2,3,4]):
+    print(i)
+
+for i in Squares([5,6,7,8,9]):
+    print(i)
