@@ -1,0 +1,18 @@
+Recursion questions
+exercise1    - sum_up_to(n) 
+exercise2    - sum_of_digits(n)
+exercise3    - power1
+exercise4    - Fibonacci
+exercise5    - reverse_string
+exercise6    - is_palindrome
+exercise7    - count_char
+exercise8    - print_countdown
+exercise9    - recursive_sum
+exercise10   - print_countup
+exercise11   - factorial
+exercise12   - recursive_list
+exercise13   - find_max
+exercise14   - flatten
+exercise15   - nested_sum
+exercise16   - binary search
+exercise17   - list
