@@ -1,0 +1,173 @@
+#Author: Mathias Nerd
+#Learnig how to build my own iterable
+
+# GENERAL ALGORITHM FOR CUSTOM ITERABLE / ITERATOR
+# A. If building an ITERATOR (one-time use):
+# 1. Create the class for the iterator
+# 2. In **init**, store your data AND create a pointer (e.g index = 0).
+# 3. In **iter**, return self.
+# 4. In **next**:
+#      a. Check if pointer is past the end -> if yes, raise StopIteration
+#      b. Get item at pointer
+#       c. Move pointer forward by 1
+#       d. Return item
+#Result: Can only loop once. Exhausted after.
+
+"""
+EXAMPLE 1: Countdown
+Counts from start down to 1.
+
+Python
+class Countdown:
+    def __init__(self, start):
+        self.current = start
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.current <= 0:
+            raise StopIteration
+        value = self.current
+        self.current -= 1
+        return value
+
+# Usage
+for n in Countdown(3):
+    print(n)  # 3, 2, 1
+
+State is self.current. It moves backwards.
+"""
+
+
+"""
+EXAMPLE 2: TakeFirstN — Takes only first N items from a list
+Useful to understand pointer logic.
+
+Python
+class TakeFirstN:
+    def __init__(self, data, n):
+        self.data = data
+        self.n = n
+        self.index = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index >= self.n or self.index >= len(self.data):
+            raise StopIteration
+        
+        value = self.data[self.index]
+        self.index += 1
+        return value
+
+# Usage
+names = ['Aminu', 'Mathias', 'Oluwaseun', 'Nerd']
+for name in TakeFirstN(names, 2):
+    print(name)  # Aminu, Mathias — only 2, even though list has 4
+
+16 lines hidden
+Same 3 steps in **next**: check end, get value, move pointer.
+
+Notice both are dead after one loop:
+"""
+
+
+#Exercises
+"""
+EXERCISE 1: MyRange(stop)
+Build an iterator like range().
+MyRange(4) should give 0, 1, 2, 3
+Hint: state is self.current = 0, stop when current >= stop
+"""
+class MyRange:
+    #The init method
+    def __init__(self, stop):
+        self.stop = stop
+        self.current = 0
+
+    #The iter method
+    def __iter__(self):
+        return self
+
+    #The next method
+    def __next__(self):
+        if self.current >= self.stop:
+            raise StopIteration
+        value = self.current
+        self.current += 1
+        return value
+
+for i in MyRange(-1):
+    print(i)
+
+
+"""
+EXERCISE 2: EvenNumbers(limit)
+Yield even numbers from 0 up to limit inclusive.
+EvenNumbers(10) → 0, 2, 4, 6, 8, 10
+EvenNumbers(7) → 0, 2, 4, 6
+Hint: start at 0, in **next** add 2 each time
+"""
+class EvenNumbers:
+    def __init__(self, limit):
+        self.limit = limit
+        self.current = 0
+    def __iter__(self):
+        return self
+    def __next__(self):
+
+        if self.current > self.limit:
+            raise StopIteration
+        value = self.current
+        self.current += 2
+        return value
+            
+
+# for i in EvenNumbers(7):
+#     print(i) 
+
+
+
+"""
+EXERCISE 3: FirstLetters(words)
+Given a list of words, yield first letter of each.
+FirstLetters(['Mathias', 'Oluwaseun', 'Nerd']) → M, O, N
+Hint: use self.index pointer like TakeFirstN, but return self.data[self.index][0]
+"""
+
+class FirstLetters:
+    def __init__(self, words):
+        self.words = words
+        self.index = 0
+        self.limit = len(self.words)
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.index >= len(self.words):
+            raise StopIteration
+        value = self.words[self.index]
+        self.index += 1
+        return value[0]
+
+for i in FirstLetters(['Mathias', 'Oluwaseun', 'Nerd']):
+        print(i)
+
+
+
+
+
+
+
+
+
+
+
+
+# B. If building a reusable ITERABLE (like list, proper way):
+
+# In **init**, store ONLY data. No pointer.
+# In **iter**, create and return a BRAND NEW iterator object (fresh pointer = 0).
+# That new iterator follows all steps from A above.
+# Result: Can loop many times, because each for loop gets a fresh iterator.

@@ -1,0 +1,38 @@
+Iterator and iterables
+
+1. Iterable: Object that CAN be looped over.
+    Has __iter__() method
+    __iter__() returns an Iterator
+    Ex: list, tuple, str, dict, range, set
+    Not stateful — doesn't remember position
+
+2. Iterator: Object that DOES the looping.
+    Has **next**() + **iter**() (returns self)
+    Remembers position / state
+    next() gives next value, raises StopIteration when done
+    Ex: list_iterator, file object
+    Link:
+    iterator = iter(iterable)
+
+for loop secret:
+So what does for actually do?
+
+This:
+
+Python
+    for x in nums:
+        print(x)
+Python secretly does this:
+
+Python
+    it = iter(nums)  # calls nums.__iter__()
+    while True:
+        try:
+            x = next(it)  # calls it.__next__()
+            print(x)
+        except StopIteration:
+            break
+
+Rule: All Iterators are Iterable, but not all Iterables are Iterators.
+
+
