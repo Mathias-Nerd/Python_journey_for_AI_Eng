@@ -1,0 +1,11 @@
+#Name: Mathias.Nerd
+def is_palindrome(s):
+    s = s.strip().lower()
+    if len(s) <= 1:
+        return True
+    if s[0] == s[-1]:
+        return is_palindrome(s[1:-1])
+    else:
+        return False
+
+print(is_palindrome("RACAR"))
