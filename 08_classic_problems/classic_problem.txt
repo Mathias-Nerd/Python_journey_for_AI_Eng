@@ -10,8 +10,8 @@ Remove duplicates
 Frequency counting
 Two Sum
 Anagram checking
+valid parenthesis
+isogram
 Binary search
 Linear search
-Sorting
-Recursion problems
 Matrix problems

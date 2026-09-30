@@ -16,3 +16,4 @@ exercise14   - flatten
 exercise15   - nested_sum
 exercise16   - binary search
 exercise17   - list
+exercise18   - find_largest

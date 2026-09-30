@@ -1,0 +1,7 @@
+Hello! This is a demo file I am trying to use to learn file handling
+This file is for practicing
+I am Mathias
+I am a Tech Enthusiast
+I love Math, CGI, and problem solving
+I am an aspiring Tech Polymath
+I am an aspiring Tech Polymath
