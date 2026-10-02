@@ -1,5 +1,5 @@
 #Mathias-Nerd
-#Felloshio exercise 
+#Fellowship exercise 
 #Week3: Question 3: Studdnt grades
 
 students = [{"name": "Sam", "scores": [80, 90]},{"name": "David", "scores": [55, 60]}]

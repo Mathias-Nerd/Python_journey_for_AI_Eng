@@ -1,5 +1,5 @@
 #Mathias-Nerd
-#Felloshio exercise 
+#Fellowship exercise 
 #Week3: Question 9: Reverse a given integer. For example, 12345 becomes 54321. (Recursive version)
 
 

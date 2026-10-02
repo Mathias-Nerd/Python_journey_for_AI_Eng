@@ -1,5 +1,5 @@
 #Mathias-Nerd
-#Felloshio exercise 
+#Felloswhip exercise 
 #Week3: Question 2 (Palindrome using 2 pointers)
 print("Welcome to a palindrome checker.")
 
