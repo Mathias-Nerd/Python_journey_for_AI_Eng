@@ -27,6 +27,6 @@ if mode in ["encrypt", "decrypt"]:
         else:
             result += ch
         # print(f"result {result}")
-    print(f"The {mode}d word is: {result}")
+    print(f"The {mode}ed word is: {result}")
 else:
     print("Wrong mode input.")

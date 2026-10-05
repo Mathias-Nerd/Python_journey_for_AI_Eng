@@ -5,7 +5,7 @@
 students = [{"name": "Sam", "scores": [80, 90]},{"name": "David", "scores": [55, 60]}]
 
 highest = 0
-highest_nane = ""
+highest_name = ""
 lowest = 101
 lowest_name = ""
 

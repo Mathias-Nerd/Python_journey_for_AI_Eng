@@ -21,4 +21,4 @@ for word, freq in word_freq.items():
     if freq > highest:
         highest = freq
         most_freq = word
-print(f"The single Word with the highest frequency is {wor} ")
+print(f"The single Word with the highest frequency is {word} ")

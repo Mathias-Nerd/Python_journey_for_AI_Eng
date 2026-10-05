@@ -1,5 +1,5 @@
 # Python_journey_for_AI_Eng
-Exercises taken when practicing python for AI Engineering
+Exercises taken when practicing python for AI Engineering in Learn2Earn Fellowship
 Files and contents
 01 - Fundamentals
 02 - Random exercises
