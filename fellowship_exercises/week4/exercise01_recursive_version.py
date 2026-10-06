@@ -2,8 +2,6 @@
 #Question1 : Palindrome
 
 
-#I don't get how to split the logic for palindrome
-#I was wasting time on it so i left it
 def is_palindrome(text):
     if len(text) <= 1:
         return True
