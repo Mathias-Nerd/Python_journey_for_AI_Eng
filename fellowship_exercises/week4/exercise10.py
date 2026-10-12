@@ -1,6 +1,6 @@
 #Mathias-Nerd
 #Fellowship exercise week 4
-#Question 10: Build a program that analyzes a list of financial transactions. Your program should calculate total income, total expenses, balance, largest expense, number of expenses, and overall financial status.
+#Question 10: Transaction Analyzer: Build a program that analyzes a list of financial transactions. Your program should calculate total income, total expenses, balance, largest expense, number of expenses, and overall financial status.
 
 
 """
