@@ -11,13 +11,13 @@ def play_game(target=None, max_attempts=None):
         while True:
             try:
                 guess = int(input("Guess a number between 1 and 100: ").strip())
-                if 1 <= guess <= 100:
-                    break
-                else:
-                    print("Number outside 1 - 100")
-                    continue
             except ValueError:
-                print("Enter a whole number from 1 to 100")
+                print("Invalid input")
+                continue
+            if 1 <= guess <= 100:
+                break
+            else:
+                print("Number outside 1 - 100")
                 continue
         attempt += 1
         if guess > target:
