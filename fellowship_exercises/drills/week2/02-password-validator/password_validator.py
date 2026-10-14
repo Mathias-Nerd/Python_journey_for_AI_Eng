@@ -28,5 +28,15 @@ def is_valid_password(password):
 
 # bonus
 def get_failed_requirements(password):
-    # Write your code here
-    pass
+    result = []
+    if not has_min_length(password):
+        result.append("min_length")
+    if not has_uppercase(password):
+        result.append("uppercase")
+    if not has_lowercase(password):
+        result.append("lowercase")
+    if not has_digit(password):
+        result.append("digit")
+    if not has_special(password):
+        result.append("special")
+    return result
