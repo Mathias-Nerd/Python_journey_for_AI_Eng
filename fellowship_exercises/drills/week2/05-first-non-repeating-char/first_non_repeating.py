@@ -1,4 +1,5 @@
-def first_non_repeating(s, case_sensitive=True):
+def first_non_repeating(s, case_sensitive=False):
+    # s = s.lower()
     ch_count = {}
     for ch in s:
         if ch not in ch_count:
@@ -14,4 +15,3 @@ def first_non_repeating(s, case_sensitive=True):
     else:
         return None
 
-print(first_non_repeating(""))
