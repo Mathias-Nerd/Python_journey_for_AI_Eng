@@ -23,4 +23,4 @@ def fibonacci_sequence(n):
         b, a = a, b-a
         j += 1
     print()
-(fibonacci_sequence())
+(fibonacci_sequence(5))
