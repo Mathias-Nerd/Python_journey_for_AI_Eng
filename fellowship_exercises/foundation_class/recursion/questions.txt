@@ -1,0 +1,138 @@
+Python Practice: Recursion and Recursive Thinking
+
+Task 1: Sum of Natural Numbers
+Suggested time: 8–10 minutes
+*Problem*
+Given a positive integer *N*, write a recursive function to calculate the sum of all integers from *1 to N*, inclusive.
+*For example*, if N = 5, calculate:
+5 + 4 + 3 + 2 + 1 = 15
+Your function must return the result.
+
+*Examples*
+1. Input: N = 5
+Output: The sum of natural numbers up to 5 is 15
+
+2. Input: N = 3
+Output: The sum of natural numbers up to 3 is 6
+
+3. Input: N = 1
+Output: The sum of natural numbers up to 1 is 1
+
+*Constraints*
+- Write a function called sum_natural(n).
+- Use recursion to calculate the sum.
+- Define a base case that stops the recursion.
+- Do not use loops.
+- Do not use *sum()*.
+- Do not hardcode the answer.
+
+
+Task 2: Fibonacci Number Calculator
+
+Suggested time: 12–15 minutes
+
+*Problem*
+The Fibonacci sequence is a sequence of numbers in which each number is the sum of the two preceding numbers.
+*The sequence begins:*
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+
+Write a recursive function that returns the Fibonacci number at position N, using zero-based indexing.
+This means:
+
+Position 0 contains 0.
+Position 1 contains 1.
+Position 2 contains 1.
+Position 3 contains 2.
+Position 4 contains 3.
+
+*Examples*
+
+1. Input: N = 6
+Output: The Fibonacci number at position 6 is 8
+
+ 2. Input: N = 4
+Output: The Fibonacci number at position 4 is 3
+
+3. Input: N = 0
+Output: The Fibonacci number at position 0 is 0
+
+*Constraints*
+- Write a function called *fibonacci(n)*.
+- Use recursion to calculate the result.
+- Define appropriate base cases.
+- The function must make two recursive calls for the general case.
+- Do not use loops.
+- Do not use a list to store the Fibonacci sequence.
+- Do not import libraries.
+- Do not hardcode answers for individual inputs.
+
+*Note:* This exercise uses the straightforward recursive approach, which becomes slow for large values of N. For this exercise, test small inputs such as N <= 20.
+
+
+
+Task 3: Calculate the Power of a Number
+
+Suggested time: 10–12 minutes
+
+*Problem*
+Given two integers, base and exponent, write a recursive function to calculate the value of base raised to the power of exponent.
+
+*For example:*
+2³ = 2 × 2 × 2 = 8
+
+Your function must calculate the result using recursion rather than Python's exponentiation operator.
+
+*Examples*
+1. Input: base = 2, exponent = 4
+Output: 2 raised to the power of 4 is 16
+
+2. Input: base = 5, exponent = 3
+Output: 5 raised to the power of 3 is 125
+
+3. Input: base = 7, exponent = 0
+Output: 7 raised to the power of 0 is 1
+
+*Constraints*
+- Write a function called *power(base, exponent)*.
+- Use recursion to calculate the result.
+- The base case must handle an exponent of 0.
+- Do not use loops.
+- Do not use the ** operator.
+- Do not import libraries.
+- Assume the exponent is a non-negative integer.
+
+
+
+
+
+Task 4: Sum of Digits
+
+Suggested time: 12–15 minutes
+*Problem*
+Given a non-negative integer N, write a recursive function to calculate the sum of its digits.
+
+*For example*, if N = 472, the result is:
+4 + 7 + 2 = 13
+
+You should solve this problem by extracting the last digit and recursively processing the remaining digits.
+
+*Examples*
+
+1. Input: N = 472
+Output: The sum of the digits of 472 is 13
+
+2. Input: N = 1234
+Output: The sum of the digits of 1234 is 10
+
+3. Input: N = 9
+Output: The sum of the digits of 9 is 9
+
+*Constraints*
+- Write a function called *sum_digits(n)*
+- Use recursion.
+- Use the modulo operator (%) to extract the last digit.
+- Use integer division (//) to remove the last digit.
+- Do not convert the number into a string.
+- Do not use loops.
+- Do not use *sum()*.
+- Do not import libraries.
