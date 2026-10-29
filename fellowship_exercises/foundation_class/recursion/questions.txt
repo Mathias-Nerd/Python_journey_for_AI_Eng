@@ -136,3 +136,75 @@ Output: The sum of the digits of 9 is 9
 - Do not use loops.
 - Do not use *sum()*.
 - Do not import libraries.
+
+
+
+Task 5: Reverse a String
+
+*Problem*
+Given a string, write a recursive function that returns the string in reverse order.
+
+*For example*, reversing "python" should produce "nohtyp".
+
+Your function must build the reversed string through recursive calls rather than using Python's built-in reversing features.
+
+*Examples*
+
+1. Input: text = "python"
+Output: The reverse of `python` is `nohtyp`
+
+2 Input: text = "hello"
+Output: The reverse of hello is olleh
+
+3. Input: text = "a"
+Output: The reverse of a is a
+
+4. Input: text = ""
+Output: The reverse of the string is ""
+
+*Constraints*
+- Write a function called reverse_string(text).
+- Use recursion.
+- Define a base case for an empty string.
+- Do not use loops.
+- Do not use slicing with a step of -1.
+- Do not use reversed().
+- Do not import libraries.
+
+
+
+
+
+Task 6: Check Whether a String Is a Palindrome
+
+
+*Problem*
+A palindrome is a word that reads the same forward and backward.
+
+Examples include "level", "madam", and "racecar".
+
+Write a recursive function that determines whether a given string is a palindrome.
+
+The function should compare the first and last characters, then recursively check the characters between them.
+
+*For this exercise*, assume the input contains only lowercase letters and has no spaces.
+
+1. Input: text = "level"
+Output: level is a palindrome.
+
+2 Input: text = "python"
+Output: python is not a palindrome.
+ 
+3. Input: text = "abba"
+Output: abba is a palindrome.
+
+4. Input: text = "a"
+Output: a is a palindrome.
+
+*Constraints*
+- Write a function called *is_palindrome(text)*.
+- Use recursion to compare characters.
+- Define a base case for when the string has zero or one character remaining.
+- Do not use loops.
+- Do not reverse the string.
+- Do not import libraries.
