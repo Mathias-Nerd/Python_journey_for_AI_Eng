@@ -31,7 +31,7 @@ def max_subarray_brute(nums):
 
 
 
-#The Optimal version (Kadana's Algorithm)
+#The Optimal version (Kadane's Algorithm)
 def max_subarray_fast(nums):
     """
     This returns the sum, start, and end of a contiguous slice in O(n) time
