@@ -23,15 +23,12 @@ def find_subsets(nums):
     #Recursive backtrackig function
     def subset(index):
 
-        #Base case
+        #BASE CASE
         if index == len(nums):
-            # print(f"Current: {current}")
-            temp = current.copy()
-            result.append(temp)
-            # print(f"result: {result}")
+            result.append(current.copy())
             return
 
-        #Recursive case
+        #RECURSIVE CASE
 
         #Choice 1
 
