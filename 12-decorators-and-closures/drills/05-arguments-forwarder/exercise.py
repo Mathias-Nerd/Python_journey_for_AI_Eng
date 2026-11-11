@@ -1,0 +1,12 @@
+"""
+Drill 05: Arguments Forwarder
+Module: 04-decorators-and-closures
+"""
+
+
+def record_call_args(func: callable) -> callable:
+    """
+    Decorator that tracks last_args and last_kwargs on the returned wrapper.
+    """
+    # TODO: Implement universal argument capture
+    pass
