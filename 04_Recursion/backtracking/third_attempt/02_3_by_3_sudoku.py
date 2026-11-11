@@ -24,7 +24,6 @@ def sudoku_3X3_solver(board):
                     empty.append(position)
         return empty
 
-    empty = get_empty_spaces(board)
         
 
     def is_placeable(board, row, column, num):
@@ -57,12 +56,16 @@ def sudoku_3X3_solver(board):
                 #RECURSE
                 res = solve(index+1)
 
-                if res == None:
-                    #BACKTRACK
-                    board[row][column] = 0
+                if res is not None:
+                    return res
+                
+                #BACKTRACK
+                board[row][column] = 0
+
 
         return res
 
+    empty = get_empty_spaces(board)
     outcome = solve(0)
     return board if outcome is  not None else "The board has no solution"
     # return empty
