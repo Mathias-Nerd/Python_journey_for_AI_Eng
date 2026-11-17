@@ -15,20 +15,15 @@ Output: 3
 
 
 def coin_change(coins, amount):
+    dp = [float("inf")] * (amount + 1)
+    dp[0] = 0
 
-    arr = [float("inf")] * (amount+1)
-    arr[0] = 0
-
-    for i in range(1, amount+1):
-        # arr[i] = float(("inf"))
+    for current_amount in range(1, amount+1):
         for coin in coins:
-            if coin <= i:
-                arr[i] = min(arr[i], 1 + arr[i-coin])
-                # amount -= coin
+            if coin <= current_amount:
+                dp[current_amount] = min(dp[current_amount], 1 + dp[current_amount-coin])
+        
 
-
-
-
-    return arr[amount]
+    return dp[amount] 
 
 print(coin_change([1,2, 5],11))
