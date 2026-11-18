@@ -9,7 +9,7 @@ def subset(num):
     res = [] #This variable contains all subsets
     temp = [] #This variable holds the current subset at a particular time
 
-    def solve(index):
+    def solve(index=0):
         """The recursive backtracking function that computes the subset"""
 
         #BASE CASE
@@ -30,7 +30,7 @@ def subset(num):
         solve(index+1)
 
 
-    solve(0)
+    solve()
     return res
 
 
